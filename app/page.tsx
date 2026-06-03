@@ -25,7 +25,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b border-[#1a3a36] bg-[#0a0a0c]/80 backdrop-blur-md">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <motion.div
+            <div
               whileHover={{ rotate: 90 }}
               transition={{ duration: 0.3 }}
               className="w-8 h-8 rounded-lg bg-[#1fddcb] flex items-center justify-center"
@@ -33,7 +33,7 @@ export default function Home() {
               <span className="text-black font-bold font-heading text-xs">
                 PS
               </span>
-            </motion.div>
+            </div>
             <span className="text-sm font-bold font-heading text-white tracking-tight">
               <div>Part Suite</div>
               <div className="text-xs text-[#666] font-normal">
