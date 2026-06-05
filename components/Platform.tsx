@@ -153,11 +153,12 @@ export default function Platform() {
                   replaces the manual parts interpreter role, saving dealerships
                   significant labour costs while improving accuracy.
                 </p>
+                
               </motion.div>
             </motion.div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-36">
             <motion.div
               initial="hidden"
               whileInView="visible"
