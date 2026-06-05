@@ -57,7 +57,10 @@
 
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
+import { LuBrain } from "react-icons/lu";
+import { FaShoppingCart } from "react-icons/fa";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -70,25 +73,23 @@ const fadeUp = {
 
 export default function Platform() {
   return (
-    <section id="platform" className="py-24 bg-black">
+    <section id="platform" className="py-24 bg-[#0b1314]">
       <div className="container mx-auto px-6">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeUp}
-          className="max-w-3xl text-left"
+          className="mb-14 max-w-3xl"
         >
           <div className="text-xs text-[#1fddcb] font-semibold uppercase tracking-widest mb-5">
             THE PLATFORM
           </div>
-
-          <h2 className="text-4xl md:text-4xl font-bold text-white leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
             A Fully Integrated AI Parts
             <br />
             <span className="text-[#1fddcb]">Wholesale & Retail Platform</span>
           </h2>
-
           <p className="text-sm md:text-base text-[#9aa0a6] mt-6 leading-relaxed max-w-2xl">
             Part Suite by OmniSuiteAI.com transforms the way dealerships and
             OEMs handle parts ordering. Our AI engine acts as your intelligent
@@ -96,6 +97,117 @@ export default function Platform() {
             parts with zero human intervention required.
           </p>
         </motion.div>
+
+        <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr]">
+          <div className="space-y-8">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeUp}
+              className="relative overflow-hidden rounded-[2rem] border border-[#1a3a36] bg-[#0f1514] shadow-[0_0_40px_rgba(0,0,0,0.25)]"
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              <Image
+                src="/images/new.png"
+                alt="AI parts warehouse"
+                width={1200}
+                height={800}
+                className="h-[420px] w-full object-cover"
+              />
+              {/* <div className="absolute bottom-0 left-0 right-0 p-8">
+                <div className="text-sm uppercase tracking-widest text-[#1fddcb] font-semibold mb-2">
+                  AI Parts Interpreter
+                </div>
+                <p className="text-sm text-[#d1d5db] max-w-xl leading-relaxed">
+                  Our AI engine instantly recognises product codes, suggests
+                  quantities based on historical ordering patterns, recommends
+                  complementary bundles (such as basecoats with activators), and
+                  flags unusual requests — all in real time. This completely
+                  replaces the manual parts interpreter role, saving dealerships
+                  significant labour costs while improving accuracy.
+                </p>
+              </div> */}
+              {/* </motion.div> */}
+
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={fadeUp}
+                className=" p-8 shadow-[0_0_20px_rgba(31,221,203,0.12)]"
+              >
+                <div className="inline-flex items-center gap-3  px-4 py-2 text-white text-sm font-semibold">
+                  {/* <span>📱</span> */}
+                  <LuBrain />
+                  AI Parts Interpreter
+                </div>
+                {/* <h3 className="mt-6 text-2xl font-bold text-white">
+                  Hands-Free Code Recognition
+                </h3> */}
+                <p className="mt-4 text-sm text-[#9aa0a6] leading-relaxed">
+                  Our AI engine instantly recognises product codes, suggests
+                  quantities based on historical ordering patterns, recommends
+                  complementary bundles (such as basecoats with activators), and
+                  flags unusual requests — all in real time. This completely
+                  replaces the manual parts interpreter role, saving dealerships
+                  significant labour costs while improving accuracy.
+                </p>
+              </motion.div>
+            </motion.div>
+          </div>
+
+          <div className="space-y-6">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeUp}
+              className="rounded-[2rem] border border-[#242727] bg-[#111820] p-8 "
+            >
+              <div className="flex items-center gap-3  text-xl">
+                {/* <span>🛒</span> */}
+                <FaShoppingCart />
+                <div className="text-sm uppercase tracking-widest font-semibold">
+                  Wholesale Ordering
+                </div>
+              </div>
+              {/* <h3 className="mt-5 text-2xl font-bold text-white">
+                Bulk Orders with AI Accuracy
+              </h3> */}
+              <p className="mt-4 text-sm text-[#9aa0a6] leading-relaxed">
+                Streamlined bulk ordering with AI-powered product matching,
+                automated reorder suggestions, and direct DMS integration.
+                Priority and stock orders flow seamlessly through approval
+                workflows to distribution centres.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeUp}
+              className="rounded-[2rem] border border-[#242727] bg-[#111820] p-8 ]"
+            >
+              <div className="flex items-center gap-3 text-white text-xl">
+                <span>🏪</span>
+                <div className="text-sm uppercase tracking-widest font-semibold">
+                  Retail Integration
+                </div>
+              </div>
+              {/* <h3 className="mt-5 text-2xl font-bold text-white">
+                Mobile Scan-and-Order
+              </h3> */}
+              <p className="mt-4 text-sm text-[#9aa0a6] leading-relaxed">
+                Empower panel and body shop partners with a simple
+                scan-and-order mobile experience. Partners access your
+                catalogue, place orders, and track deliveries — all connected to
+                your existing DMS inventory in real time.
+              </p>
+            </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
