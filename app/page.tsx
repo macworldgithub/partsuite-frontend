@@ -525,7 +525,8 @@ import DMSConnectivity from "@/components/DMSConnectivity";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-
+import Compatibility from "@/components/Compatibility";
+// j
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen font-sans bg-[#0a0a0c]">
@@ -554,8 +555,8 @@ export default function Home() {
             <InteractiveDemo />
           </div>
         </section>
-
         <DMSConnectivity />
+        <Compatibility />
         <CTA />
       </main>
       <Footer />
